@@ -3,14 +3,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FavoritesListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .systemBlue
     }
 
 
 }
-
