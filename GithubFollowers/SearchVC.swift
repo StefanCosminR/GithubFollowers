@@ -13,6 +13,8 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
+        
+        createDismissKeyboardTapGesture()
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
@@ -22,6 +24,11 @@ class SearchVC: UIViewController {
         super.viewWillAppear(animated)
         
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     func configureLogoImageView() {
