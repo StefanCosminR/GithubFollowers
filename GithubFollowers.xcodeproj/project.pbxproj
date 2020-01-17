@@ -16,6 +16,7 @@
 		3D44459F23D0FB170006935F /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D44459E23D0FB170006935F /* GFButton.swift */; };
 		3D4445A123D0FDFF0006935F /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4445A023D0FDFF0006935F /* GFTextField.swift */; };
 		3D96D98C23D24C09007E933E /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D98B23D24C09007E933E /* FollowerListVC.swift */; };
+		3D96D98E23D25124007E933E /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96D98D23D25124007E933E /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3D44459E23D0FB170006935F /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		3D4445A023D0FDFF0006935F /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		3D96D98B23D24C09007E933E /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
+		3D96D98D23D25124007E933E /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				3D44459A23D0F4050006935F /* SearchVC.swift */,
+				3D96D98D23D25124007E933E /* String+Ext.swift */,
 				3D96D98B23D24C09007E933E /* FollowerListVC.swift */,
 				3D44459C23D0F46B0006935F /* FavoritesListVC.swift */,
 				3D44458623D0ED130006935F /* AppDelegate.swift */,
@@ -152,6 +155,7 @@
 				3D44459B23D0F4050006935F /* SearchVC.swift in Sources */,
 				3D96D98C23D24C09007E933E /* FollowerListVC.swift in Sources */,
 				3D44458723D0ED130006935F /* AppDelegate.swift in Sources */,
+				3D96D98E23D25124007E933E /* String+Ext.swift in Sources */,
 				3D44458923D0ED130006935F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
