@@ -5,9 +5,8 @@ import Foundation
 
 extension String {
     var isValidGithubUsername: Bool {
-        let phoneNumberFormat = #"/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i"#
-        let numberPredicate = NSPredicate(format: "SELF MATCHES %@", phoneNumberFormat)
-        return numberPredicate.evaluate(with: self)
+        let regexPattern = #"^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$"#
+        return range(of: regexPattern, options: .regularExpression) != nil
     }
     
 }
