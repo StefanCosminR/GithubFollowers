@@ -20,6 +20,7 @@
 		3DEB7DEB23D33A080062A605 /* GFTitleLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7DEA23D33A080062A605 /* GFTitleLable.swift */; };
 		3DEB7DED23D33EEC0062A605 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7DEC23D33EEC0062A605 /* GFBodyLabel.swift */; };
 		3DEB7DEF23D33FE50062A605 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7DEE23D33FE50062A605 /* GFAlertVC.swift */; };
+		3DEB7DF323D34A430062A605 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7DF223D34A430062A605 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3DEB7DEA23D33A080062A605 /* GFTitleLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLable.swift; sourceTree = "<group>"; };
 		3DEB7DEC23D33EEC0062A605 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		3DEB7DEE23D33FE50062A605 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		3DEB7DF223D34A430062A605 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				3D44458F23D0ED140006935F /* Assets.xcassets */,
 				3D44459123D0ED140006935F /* LaunchScreen.storyboard */,
 				3D44459423D0ED140006935F /* Info.plist */,
+				3DEB7DF223D34A430062A605 /* UIViewController+Ext.swift */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			files = (
 				3DEB7DEB23D33A080062A605 /* GFTitleLable.swift in Sources */,
 				3D4445A123D0FDFF0006935F /* GFTextField.swift in Sources */,
+				3DEB7DF323D34A430062A605 /* UIViewController+Ext.swift in Sources */,
 				3D44459D23D0F46B0006935F /* FavoritesListVC.swift in Sources */,
 				3D44459F23D0FB170006935F /* GFButton.swift in Sources */,
 				3D44459B23D0F4050006935F /* SearchVC.swift in Sources */,
