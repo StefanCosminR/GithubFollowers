@@ -5,7 +5,7 @@ import Foundation
 
 extension String {
     var isValidGithubUsername: Bool {
-        let regexPattern = #"^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$"#
+        let regexPattern = #"^[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$"#
         return range(of: regexPattern, options: .regularExpression) != nil
     }
     
