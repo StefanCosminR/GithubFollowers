@@ -25,6 +25,7 @@
 		3DEB7DFF23D369480062A605 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7DFE23D369480062A605 /* Follower.swift */; };
 		3DEB7E0323D36A8E0062A605 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0223D36A8E0062A605 /* User.swift */; };
 		3DEB7E0623D379480062A605 /* GitHubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0523D379480062A605 /* GitHubManager.swift */; };
+		3DEB7E0923D38B950062A605 /* GitHubManagerErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		3DEB7DFE23D369480062A605 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		3DEB7E0223D36A8E0062A605 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3DEB7E0523D379480062A605 /* GitHubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManager.swift; sourceTree = "<group>"; };
+		3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManagerErrorMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		3D44458523D0ED130006935F /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				3DEB7E0723D38B750062A605 /* Utilities */,
 				3DEB7E0423D379340062A605 /* Managers */,
 				3DEB7DFD23D3693D0062A605 /* Model */,
 				3DEB7DF523D34EE00062A605 /* Custom Views */,
@@ -175,6 +178,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		3DEB7E0723D38B750062A605 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,6 +264,7 @@
 				3DEB7DF323D34A430062A605 /* UIViewController+Ext.swift in Sources */,
 				3D44459D23D0F46B0006935F /* FavoritesListVC.swift in Sources */,
 				3D44459F23D0FB170006935F /* GFButton.swift in Sources */,
+				3DEB7E0923D38B950062A605 /* GitHubManagerErrorMessages.swift in Sources */,
 				3D44459B23D0F4050006935F /* SearchVC.swift in Sources */,
 				3DEB7E0323D36A8E0062A605 /* User.swift in Sources */,
 				3DEB7DEF23D33FE50062A605 /* GFAlertVC.swift in Sources */,

@@ -12,6 +12,17 @@ class FollowerListVC: UIViewController {
         
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        GitHubManager.shared.getFollowers(for: username, page: 1) {[weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let followers):
+                print(followers)
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Oh no, it failed 😱", message: error.rawValue, buttonTitle: "Ok 😅")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

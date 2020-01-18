@@ -9,27 +9,27 @@ struct GitHubManager {
     
     private init() {}
     
-    func getFollowers(for username: String, page: Int, completed: @escaping(Result<[Follower], Error>) -> Void) {
+    func getFollowers(for username: String, page: Int, completed: @escaping(Result<[Follower], GitHubManagerErrorMessages>) -> Void) {
         let endpoint = baseUrl + "users/\(username)/followers?per_page=50&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
-            completed(.failure(Errors.invalidURL(url: endpoint)))
+            completed(.failure(.invalidUsername))
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
-                completed(.failure(Errors.networkError))
+                completed(.failure(.unableToComplete))
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(Errors.invalidResponse))
+                completed(.failure(.invalidRequest))
                 return
             }
             
             guard let data = data else {
-                completed(.failure(Errors.emptyBody))
+                completed(.failure(.invalidData))
                 return
             }
             
@@ -39,18 +39,10 @@ struct GitHubManager {
                 let followers = try decoder.decode([Follower].self, from: data)
                 completed(.success(followers))
             } catch {
-                completed(.failure(Errors.undecodableData))
+                completed(.failure(.invalidData))
             }
         }
         
         task.resume()
-    }
-    
-    enum Errors: Error {
-        case invalidURL(url: String)
-        case networkError
-        case invalidResponse
-        case emptyBody
-        case undecodableData
     }
 }
