@@ -26,6 +26,7 @@
 		3DEB7E0323D36A8E0062A605 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0223D36A8E0062A605 /* User.swift */; };
 		3DEB7E0623D379480062A605 /* GitHubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0523D379480062A605 /* GitHubManager.swift */; };
 		3DEB7E0923D38B950062A605 /* GitHubManagerErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */; };
+		3DF6513423D42C7200DA0480 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6513323D42C7200DA0480 /* FollowerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		3DEB7E0223D36A8E0062A605 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3DEB7E0523D379480062A605 /* GitHubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManager.swift; sourceTree = "<group>"; };
 		3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManagerErrorMessages.swift; sourceTree = "<group>"; };
+		3DF6513323D42C7200DA0480 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		3DEB7DF523D34EE00062A605 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				3DF6513223D42C4E00DA0480 /* Cells */,
 				3DEB7DF723D3503F0062A605 /* Labels */,
 				3DEB7DFC23D358270062A605 /* Views */,
 				3DEB7DF823D3504C0062A605 /* View Controllers */,
@@ -184,6 +187,14 @@
 				3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3DF6513223D42C4E00DA0480 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3DF6513323D42C7200DA0480 /* FollowerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				3DEB7E0923D38B950062A605 /* GitHubManagerErrorMessages.swift in Sources */,
 				3D44459B23D0F4050006935F /* SearchVC.swift in Sources */,
 				3DEB7E0323D36A8E0062A605 /* User.swift in Sources */,
+				3DF6513423D42C7200DA0480 /* FollowerCell.swift in Sources */,
 				3DEB7DEF23D33FE50062A605 /* GFAlertVC.swift in Sources */,
 				3D96D98C23D24C09007E933E /* FollowerListVC.swift in Sources */,
 				3D44458723D0ED130006935F /* AppDelegate.swift in Sources */,
