@@ -27,6 +27,7 @@
 		3DEB7E0623D379480062A605 /* GitHubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0523D379480062A605 /* GitHubManager.swift */; };
 		3DEB7E0923D38B950062A605 /* GitHubManagerErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */; };
 		3DF6513423D42C7200DA0480 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6513323D42C7200DA0480 /* FollowerCell.swift */; };
+		3DF6513623D42CFE00DA0480 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF6513523D42CFE00DA0480 /* GFAvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3DEB7E0523D379480062A605 /* GitHubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManager.swift; sourceTree = "<group>"; };
 		3DEB7E0823D38B950062A605 /* GitHubManagerErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubManagerErrorMessages.swift; sourceTree = "<group>"; };
 		3DF6513323D42C7200DA0480 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		3DF6513523D42CFE00DA0480 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				3DEB7DF823D3504C0062A605 /* View Controllers */,
 				3D4445A023D0FDFF0006935F /* GFTextField.swift */,
 				3D44459E23D0FB170006935F /* GFButton.swift */,
+				3DF6513523D42CFE00DA0480 /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				3DEB7DFB23D353AA0062A605 /* GFAlertContainerView.swift in Sources */,
 				3DEB7DFF23D369480062A605 /* Follower.swift in Sources */,
+				3DF6513623D42CFE00DA0480 /* GFAvatarImageView.swift in Sources */,
 				3DEB7DEB23D33A080062A605 /* GFTitleLable.swift in Sources */,
 				3D4445A123D0FDFF0006935F /* GFTextField.swift in Sources */,
 				3DEB7E0623D379480062A605 /* GitHubManager.swift in Sources */,
