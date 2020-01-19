@@ -1,11 +1,14 @@
 // Create by Stefan Romanescu on 18/01/2020 
 // Using Swift 5.0
 
-import Foundation
+import UIKit
 
 struct GitHubManager {
+    
     static let shared = GitHubManager()
+    
     private let baseUrl = "https://api.github.com/"
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
