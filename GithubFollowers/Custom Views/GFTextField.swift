@@ -18,8 +18,6 @@ class GFTextField: UITextField {
         translatesAutoresizingMaskIntoConstraints = false
         
         layer.cornerRadius          = 10
-        layer.borderWidth           = 2
-        layer.borderColor           = UIColor.systemGray4.cgColor
         
         textColor                   = .label
         tintColor                   = .label
@@ -29,7 +27,7 @@ class GFTextField: UITextField {
         font                        = UIFont.preferredFont(forTextStyle: .title2)
         
         
-        backgroundColor             = .tertiarySystemBackground
+        backgroundColor             = UIColor(named: "UITextFieldColor")!
         autocorrectionType          = .no
         returnKeyType               = .go
         
