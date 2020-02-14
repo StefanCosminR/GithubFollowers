@@ -5,7 +5,7 @@ import UIKit
 
 class GFEmptyStateView: UIView {
     
-    let messageLable = GFTitleLable(textAlignment: .center, fontSize: 28)
+    let messageLable = GFTitleLabel(textAlignment: .center, fontSize: 28)
     let logoImageView = UIImageView()
     
     override init(frame: CGRect) {
