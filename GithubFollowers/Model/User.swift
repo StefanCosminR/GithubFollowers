@@ -2,15 +2,15 @@
 // Using Swift 5.0
 
 struct User: Codable {
-    let avaratUrl: String
-    let bio: String?
+    let avatarUrl: String
+    var bio: String?
     let createdAt: String
     let followers: Int
     let following: Int
     let htmlUrl: String
-    let location: String?
+    var location: String?
     let login: String
-    let name: String?
+    var name: String?
     let publicGists: Int
     let publicRepos: Int
 }

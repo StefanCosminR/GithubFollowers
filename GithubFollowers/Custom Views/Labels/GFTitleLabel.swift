@@ -29,6 +29,5 @@ class GFTitleLabel: UILabel {
         textColor                   = .label // dark in light mode and white in dark mode
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 
 }

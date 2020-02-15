@@ -49,8 +49,8 @@ struct GitHubManager {
         task.resume()
     }
     
-    func getUserInfo(for username: String, completed: @escaping(Result<Follower, GitHubManagerErrorMessages>) -> Void) {
-        let endpoint = baseUrl + "\(username)"
+    func getUserInfo(for username: String, completed: @escaping(Result<User, GitHubManagerErrorMessages>) -> Void) {
+        let endpoint = baseUrl + "users/\(username)"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidUsername))
@@ -76,7 +76,7 @@ struct GitHubManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let user = try decoder.decode(Follower.self, from: data)
+                let user = try decoder.decode(User.self, from: data)
                 completed(.success(user))
             } catch {
                 completed(.failure(.invalidData))
