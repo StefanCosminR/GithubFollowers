@@ -11,16 +11,26 @@ import UIKit
 class UserInfoVC: UIViewController {
     
     lazy var headerView = UIView()
+    lazy var itemViewOne = UIView()
+    lazy var itemViewTwo = UIView()
     
     var username: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureVC()
+        layoutUI()
+        getUserInfo()
+    }
+    
+    private func configureVC() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
-        layoutUI()
-        
+    }
+    
+    private func getUserInfo() {
         GitHubManager.shared.getUserInfo(for: username) { [weak self] result in
             guard let self = self else { return }
             
@@ -33,19 +43,33 @@ class UserInfoVC: UIViewController {
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
-        
     }
     
-    func layoutUI() {
-        view.addSubview(headerView)
+    private func layoutUI() {
+        let itemViews = [headerView, itemViewOne, itemViewTwo]
+        let padding: CGFloat = 20
         
-        headerView.translatesAutoresizingMaskIntoConstraints = false
+        var currentReferenceForTopAnchor = view.safeAreaLayoutGuide.topAnchor
+        for itemView in itemViews {
+            view.addSubview(itemView)
+            itemView.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                itemView.topAnchor.constraint(equalTo: currentReferenceForTopAnchor, constant: padding),
+                itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+                itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
+            ])
+            
+            currentReferenceForTopAnchor = itemView.bottomAnchor
+        }
+        
+        itemViewOne.backgroundColor = .systemGray
+        itemViewTwo.backgroundColor = .systemBlue
         
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180)
+            headerView.heightAnchor.constraint(equalToConstant: 180),
+            itemViewOne.heightAnchor.constraint(equalToConstant: 140),
+            itemViewTwo.heightAnchor.constraint(equalToConstant: 140),
         ])
     }
     
