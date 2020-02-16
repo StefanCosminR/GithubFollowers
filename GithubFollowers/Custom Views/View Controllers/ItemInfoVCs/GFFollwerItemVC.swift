@@ -8,7 +8,20 @@
 
 import UIKit
 
-class GFFollowerItemVC: GFItemInfoVC {
+class GFFollowerItemVC: UIViewController {
+    
+    var mainView: GFItemInfoVC
+    private var user: User
+    
+    init(user: User) {
+        mainView = GFItemInfoVC(user: user)
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +29,12 @@ class GFFollowerItemVC: GFItemInfoVC {
     }
     
     func configureItems() {
-        itemInfoViewOne.set(itemInfoType: .followers, with: user.followers)
-        itemInfoViewTwo.set(itemInfoType: .following, with: user.following)
-        actionButton.set(backgroundColor: .systemGreen, title: "Get Followers")
+        addChild(mainView)
+        view.addSubview(mainView.view)
+        mainView.willMove(toParent: self)
+                
+        mainView.itemInfoViewOne.set(itemInfoType: .followers, with: user.followers)
+        mainView.itemInfoViewTwo.set(itemInfoType: .following, with: user.following)
+        mainView.actionButton.set(backgroundColor: .systemGreen, title: "Get Followers")
     }
 }
