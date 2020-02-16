@@ -38,6 +38,7 @@
 		D687794A23F71CA800191779 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687794923F71CA800191779 /* GFUserInfoHeaderVC.swift */; };
 		D687794C23F71D1700191779 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687794B23F71D1700191779 /* GFSecondaryTitleLabel.swift */; };
 		D687794E23F726C500191779 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687794D23F726C500191779 /* Constants.swift */; };
+		D6F2F5E323F951A90008F5E6 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F2F5E223F951A90008F5E6 /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		D687794923F71CA800191779 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		D687794B23F71D1700191779 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		D687794D23F726C500191779 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D6F2F5E223F951A90008F5E6 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				3D96D98D23D25124007E933E /* String+Ext.swift */,
 				3DEB7DF223D34A430062A605 /* UIViewController+Ext.swift */,
+				D6F2F5E223F951A90008F5E6 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				D687794A23F71CA800191779 /* GFUserInfoHeaderVC.swift in Sources */,
 				D617C02423F8145700524C23 /* GFFollwerItemVC.swift in Sources */,
 				3DC5ADB323D4D66B00ECD068 /* GFEmptyStateView.swift in Sources */,
+				D6F2F5E323F951A90008F5E6 /* Date+Ext.swift in Sources */,
 				3D96D98C23D24C09007E933E /* FollowerListVC.swift in Sources */,
 				3D44458723D0ED130006935F /* AppDelegate.swift in Sources */,
 				3D96D98E23D25124007E933E /* String+Ext.swift in Sources */,

@@ -13,6 +13,7 @@ class UserInfoVC: UIViewController {
     lazy var headerView = UIView()
     lazy var itemViewOne = UIView()
     lazy var itemViewTwo = UIView()
+    lazy var dateLabel = GFBodyLabel(textAlignment: .center)
     
     var username: String!
 
@@ -40,6 +41,7 @@ class UserInfoVC: UIViewController {
                     self.add(childVC: GFUserInfoHeaderVC(user: userInfo), to: self.headerView)
                     self.add(childVC: GFRepoItemVC(user: userInfo), to: self.itemViewOne)
                     self.add(childVC: GFFollowerItemVC(user: userInfo), to: self.itemViewTwo)
+                    self.dateLabel.text = "On GitHub since \(userInfo.createdAt.asDisplayFormat)"
                 }
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
@@ -48,7 +50,7 @@ class UserInfoVC: UIViewController {
     }
     
     private func layoutUI() {
-        let itemViews = [headerView, itemViewOne, itemViewTwo]
+        let itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         let padding: CGFloat = 20
         
         var currentReferenceForTopAnchor = view.safeAreaLayoutGuide.topAnchor
@@ -69,6 +71,7 @@ class UserInfoVC: UIViewController {
             headerView.heightAnchor.constraint(equalToConstant: 180),
             itemViewOne.heightAnchor.constraint(equalToConstant: 140),
             itemViewTwo.heightAnchor.constraint(equalToConstant: 140),
+            dateLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
     

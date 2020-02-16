@@ -11,4 +11,17 @@ extension String {
         return githubUsernameRegex.firstMatch(in: self, options: [], range: range) != nil
     }
     
+    var asDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = .current
+    
+        return dateFormatter.date(from: self)
+    }
+    
+    var asDisplayFormat: String {
+        guard let date = self.asDate else { return "N/A" }
+        return date.asMonthYearFormat
+    }
 }
