@@ -10,13 +10,15 @@ import UIKit
 
 class GFFollowerItemVC: UIViewController {
     
-    var mainView: GFItemInfoVC
+    private var mainView: GFItemInfoVC
     private var user: User
+    weak var delegate: UserInfoVCDelegate!
     
     init(user: User) {
         mainView = GFItemInfoVC(user: user)
         self.user = user
         super.init(nibName: nil, bundle: nil)
+        mainView.actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -26,6 +28,10 @@ class GFFollowerItemVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
+    }
+    
+    @objc func actionButtonTapped() {
+        delegate.didTapGetFollowers(for: user)
     }
     
     func configureItems() {

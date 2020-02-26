@@ -10,9 +10,20 @@ import UIKit
 
 class GFRepoItemVC: GFItemInfoVC {
     
+    weak var delegate: UserInfoVCDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
+        configureActionButton()
+    }
+    
+    func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped() {
+        delegate.didTapGithubProfile(for: user)
     }
     
     func configureItems() {
