@@ -60,6 +60,9 @@ class FollowerListVC: UIViewController {
     private func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let favoriteButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(favoriteButtonTapped))
+        navigationItem.rightBarButtonItem = favoriteButton
     }
     
     private func getFollowers(username: String, page: Int) {
@@ -107,6 +110,10 @@ class FollowerListVC: UIViewController {
             
             return cell
         }
+    }
+    
+    @objc func favoriteButtonTapped() {
+        
     }
     
     private func updateData(on followers: [Follower]) {
