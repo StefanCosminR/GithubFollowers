@@ -26,6 +26,9 @@ class GFAvatarImageView: UIImageView {
     // TODO: Is this really supposed to go here?
     func downloadImage(from urlString: String) {
         
+        // set placeholder otherwise the old avatar will persist until new one is fetched
+        image = placeholderImage
+        
         // check cache
         let cacheKey = urlString as NSString
         if let image = GitHubManager.shared.cache.object(forKey: cacheKey) {
