@@ -30,8 +30,8 @@ class GFDataLoadingViewController: UIViewController {
         activitiIndicator.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            activitiIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            activitiIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            activitiIndicator.centerYAnchor.constraint(equalTo: existingContainerView.centerYAnchor),
+            activitiIndicator.centerXAnchor.constraint(equalTo: existingContainerView.centerXAnchor)
         ])
         
         activitiIndicator.startAnimating()
