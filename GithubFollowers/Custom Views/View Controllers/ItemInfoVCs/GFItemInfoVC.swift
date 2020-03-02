@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ItemInfoVCDelegate: class {
+    func didTapGithubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
+
 class GFItemInfoVC: UIViewController {
     
     lazy var stackView = UIStackView()
@@ -56,8 +61,7 @@ class GFItemInfoVC: UIViewController {
 //    }
     
     private func layoutUI() {
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView, actionButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20

@@ -3,9 +3,7 @@
 
 import UIKit
 
-protocol FollowerListViewControllerDelegate: class {
-    func didRequestFollowers(for username: String)
-}
+
 
 class FollowerListVC: GFDataLoadingViewController {
     
@@ -209,7 +207,7 @@ extension FollowerListVC: UISearchResultsUpdating {
     
 }
 
-extension FollowerListVC: FollowerListViewControllerDelegate {
+extension FollowerListVC: UserInfoViewControllerDelegate {
     func didRequestFollowers(for username: String) {
         self.username = username
         title = username
