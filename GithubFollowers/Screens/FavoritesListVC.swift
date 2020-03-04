@@ -3,7 +3,7 @@
 
 import UIKit
 
-class FavoritesListVC: UIViewController {
+class FavoritesListVC: GFDataLoadingViewController {
     
     private lazy var tableView = UITableView()
     private lazy var favorites: [Follower] = []
@@ -76,9 +76,7 @@ extension FavoritesListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
-        let destinationViewController = FollowerListVC()
-        destinationViewController.username = favorite.login
-        destinationViewController.title = favorite.login
+        let destinationViewController = FollowerListVC(username: favorite.login)
         
         navigationController?.pushViewController(destinationViewController, animated: true)
     }

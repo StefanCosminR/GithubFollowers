@@ -5,7 +5,7 @@ import UIKit
 
 class GFAvatarImageView: UIImageView {
     
-    let placeholderImage = UIImage(named: "avatar-placeholder")!
+    let placeholderImage = Images.placeholder
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,38 +23,13 @@ class GFAvatarImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    // TODO: Is this really supposed to go here?
     func downloadImage(from urlString: String) {
-        
         // set placeholder otherwise the old avatar will persist until new one is fetched
         image = placeholderImage
-        
-        // check cache
-        let cacheKey = urlString as NSString
-        if let image = GitHubManager.shared.cache.object(forKey: cacheKey) {
-            self.image = image
-            return
+        GitHubManager.shared.downloadImage(from: urlString) { [weak self] image in
+            guard let self = self, let image = image else { return }
+            DispatchQueue.main.async { self.image = image }
         }
-        
-        // not found in cache, doing network request
-        guard let url = URL(string: urlString) else { return }
-    
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let self = self else { return }
-            if let _ = error { return }
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
-            guard let data = data else { return }
-            
-            guard let image = UIImage(data: data) else { return }
-            
-            GitHubManager.shared.cache.setObject(image, forKey: cacheKey)
-            
-            DispatchQueue.main.async {
-                self.image = image
-            }
-        }
-        
-        task.resume()
     }
 
 }
