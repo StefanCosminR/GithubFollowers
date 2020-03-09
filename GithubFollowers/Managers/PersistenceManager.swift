@@ -24,8 +24,7 @@ struct PersistenceManager {
     static func updateWith(favorite: Follower, actionType: PersistenceActionType, completed: @escaping (PersistenceManagerErrors?) -> Void) {
         retrieveFavorites { result in
             switch result {
-            case .success(let favorites):
-                var favorites = favorites
+            case .success(var favorites):
                 
                 switch actionType {
                 case .add:

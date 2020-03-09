@@ -3,9 +3,7 @@
 
 import UIKit
 
-protocol FollowerListViewControllerDelegate: class {
-    func didRequestFollowers(for username: String)
-}
+
 
 class FollowerListVC: GFDataLoadingViewController {
     
@@ -140,7 +138,7 @@ class FollowerListVC: GFDataLoadingViewController {
                     guard let self = self else { return }
                     
                     guard let error = error else {
-                        self.presentGFAlertOnMainThread(title: "Success", message: "You have succesfully favorited this user 🎉", buttonTitle: "Hooray!")
+                        self.presentGFAlertOnMainThread(title: "Success", message: "You have succesfully favorited this user 🎉", buttonTitle: "Great!")
                         return
                     }
                     
@@ -209,7 +207,7 @@ extension FollowerListVC: UISearchResultsUpdating {
     
 }
 
-extension FollowerListVC: FollowerListViewControllerDelegate {
+extension FollowerListVC: UserInfoViewControllerDelegate {
     func didRequestFollowers(for username: String) {
         self.username = username
         title = username

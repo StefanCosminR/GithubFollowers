@@ -39,6 +39,8 @@
 		D617C02223F8126F00524C23 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617C02123F8126F00524C23 /* GFRepoItemVC.swift */; };
 		D617C02423F8145700524C23 /* GFFollwerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617C02323F8145700524C23 /* GFFollwerItemVC.swift */; };
 		D6383F19240A440700329804 /* GFDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6383F18240A440700329804 /* GFDataLoadingViewController.swift */; };
+		D638485C240D12EA00FB0530 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638485B240D12EA00FB0530 /* UIView+Ext.swift */; };
+		D638485E240D208200FB0530 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D638485D240D208200FB0530 /* UITableView+Ext.swift */; };
 		D687794823F7108200191779 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687794723F7108200191779 /* UserInfoVC.swift */; };
 		D687794A23F71CA800191779 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687794923F71CA800191779 /* GFUserInfoHeaderVC.swift */; };
 		D687794C23F71D1700191779 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687794B23F71D1700191779 /* GFSecondaryTitleLabel.swift */; };
@@ -81,6 +83,8 @@
 		D617C02123F8126F00524C23 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		D617C02323F8145700524C23 /* GFFollwerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollwerItemVC.swift; sourceTree = "<group>"; };
 		D6383F18240A440700329804 /* GFDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingViewController.swift; sourceTree = "<group>"; };
+		D638485B240D12EA00FB0530 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		D638485D240D208200FB0530 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		D687794723F7108200191779 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		D687794923F71CA800191779 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		D687794B23F71D1700191779 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				3D96D98D23D25124007E933E /* String+Ext.swift */,
 				3DEB7DF223D34A430062A605 /* UIViewController+Ext.swift */,
 				D6F2F5E223F951A90008F5E6 /* Date+Ext.swift */,
+				D638485B240D12EA00FB0530 /* UIView+Ext.swift */,
+				D638485D240D208200FB0530 /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				3DEB7E0623D379480062A605 /* GitHubManager.swift in Sources */,
 				D617C01E23F80B1000524C23 /* GFItemInfoView.swift in Sources */,
 				D617C02023F80F9600524C23 /* GFItemInfoVC.swift in Sources */,
+				D638485E240D208200FB0530 /* UITableView+Ext.swift in Sources */,
 				3DEB7DF323D34A430062A605 /* UIViewController+Ext.swift in Sources */,
 				3D44459D23D0F46B0006935F /* FavoritesListVC.swift in Sources */,
 				D617C02223F8126F00524C23 /* GFRepoItemVC.swift in Sources */,
@@ -390,6 +397,7 @@
 				D606C1FE2407C0B000B6AFA5 /* FavoriteCell.swift in Sources */,
 				3D96D98E23D25124007E933E /* String+Ext.swift in Sources */,
 				3D44458923D0ED130006935F /* SceneDelegate.swift in Sources */,
+				D638485C240D12EA00FB0530 /* UIView+Ext.swift in Sources */,
 				3DEB7DED23D33EEC0062A605 /* GFBodyLabel.swift in Sources */,
 				D606C1FC2407B36200B6AFA5 /* PersistenceManagerErrors.swift in Sources */,
 				D687794823F7108200191779 /* UserInfoVC.swift in Sources */,

@@ -8,9 +8,8 @@
 
 import UIKit
 
-protocol UserInfoVCDelegate: class {
-    func didTapGithubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
+protocol UserInfoViewControllerDelegate: class {
+    func didRequestFollowers(for username: String)
 }
 
 class UserInfoVC: UIViewController {
@@ -19,7 +18,7 @@ class UserInfoVC: UIViewController {
     lazy var itemViewOne = UIView()
     lazy var itemViewTwo = UIView()
     lazy var dateLabel = GFBodyLabel(textAlignment: .center)
-    weak var delegate: FollowerListViewControllerDelegate!
+    weak var delegate: UserInfoViewControllerDelegate!
     
     var username: String!
 
@@ -85,7 +84,7 @@ class UserInfoVC: UIViewController {
             headerView.heightAnchor.constraint(equalToConstant: 180),
             itemViewOne.heightAnchor.constraint(equalToConstant: 140),
             itemViewTwo.heightAnchor.constraint(equalToConstant: 140),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+            dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -101,7 +100,7 @@ class UserInfoVC: UIViewController {
     }
 }
 
-extension UserInfoVC: UserInfoVCDelegate {
+extension UserInfoVC: ItemInfoVCDelegate {
     func didTapGithubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "THe url attached to this user is invalid", buttonTitle: "Ok")

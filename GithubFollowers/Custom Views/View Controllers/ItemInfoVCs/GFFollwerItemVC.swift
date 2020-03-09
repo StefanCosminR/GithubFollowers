@@ -12,7 +12,7 @@ class GFFollowerItemVC: UIViewController {
     
     private var mainView: GFItemInfoVC
     private var user: User
-    weak var delegate: UserInfoVCDelegate!
+    weak var delegate: ItemInfoVCDelegate!
     
     init(user: User) {
         mainView = GFItemInfoVC(user: user)

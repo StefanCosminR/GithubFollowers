@@ -10,7 +10,7 @@ import UIKit
 
 class GFRepoItemVC: GFItemInfoVC {
     
-    weak var delegate: UserInfoVCDelegate!
+    weak var delegate: ItemInfoVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
